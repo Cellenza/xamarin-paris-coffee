@@ -1,6 +1,10 @@
 # xamarin-paris-coffee
 Bootstrap resources to support training on xamarin platform
 
+## Technical design
+
+![Technical design](snippets/technical.design.png)
+
 ## Datastructure
 
 Make the following request to test the API :  
