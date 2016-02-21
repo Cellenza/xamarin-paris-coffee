@@ -1,5 +1,7 @@
 # xamarin-paris-coffee
-Bootstrap resources to support training on xamarin platform
+Bootstrap resources to support training on xamarin platform.  
+[App Preview](snippets/app.screens.png)
+
 
 ## Technical design
 
