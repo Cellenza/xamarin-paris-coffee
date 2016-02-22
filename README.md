@@ -3,6 +3,14 @@ Bootstrap resources to support training on xamarin platform.
 [App Preview](snippets/app.screens.png)
 
 
+## Training plan :  
+
+* J1 : Discovering the platform, and workstation setup
+* J2 : Implement App core features . View [more](snippets/service-tests.md)
+* J3 : Implement iOs App
+* J4 : Implement Android App
+* J5 : Discovering Xamarin.Forms
+
 ## Technical design
 
 ![Technical design](snippets/technical.design.png)
