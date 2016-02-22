@@ -11,7 +11,7 @@ Bootstrap resources to support training on xamarin platform.
 * J4 : Implement Android App
 * J5 : Discovering Xamarin.Forms
 
-## Technical design
+## App technical design
 
 ![Technical design](snippets/technical.design.png)
 
