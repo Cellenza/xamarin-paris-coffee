@@ -10,28 +10,24 @@ namespace ParisCoffee.Tests
 {
 	public class CoffeeShopServiceTests
 	{
-		ICoffeeShopApiClientFactory _apiClientFactory;
+		IApiClientFactory _apiClientFactory;
 		ICoffeeShopService _service;
 
 		[SetUp]
 		public void Setup()
 		{
-			var mockApiUrl = new Uri ("http://cellenza.test.com");
+			var mockApiUrl = new Uri ("http://test.test.com");
 			var  mockHttp = new MockHttpMessageHandler();
 
 			mockHttp
 				.When (mockApiUrl.ToString())
-
 				.Respond ( "application/json", _samplie_json);
 
 			_apiClientFactory = MockHelper.CreateClient (mockHttp);
 
-		
-			_service = new CoffeeShopService (_apiClientFactory, mockApiUrl);
+			_service = new CoffeeShopService (_apiClientFactory);
 			
 		}
-
-
 
 
 		[Test]
@@ -40,6 +36,7 @@ namespace ParisCoffee.Tests
 			var result =  _service.GetAllCoffeeShops ().Result;
 
 			Assert.AreEqual("Coffee Chope", result.ElementAt (0).Name);
+			Assert.Greater(result.ElementAt (0).Coordinates.Longitude, 0);
 		}
 
 	

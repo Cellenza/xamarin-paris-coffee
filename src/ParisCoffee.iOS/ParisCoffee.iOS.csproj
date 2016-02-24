@@ -86,8 +86,6 @@
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -99,6 +97,11 @@
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Platform">
       <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -119,11 +122,27 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="LandingViewController.cs" />
+    <Compile Include="LandingViewController.designer.cs">
+      <DependentUpon>LandingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllCoffeeController.cs" />
+    <Compile Include="AllCoffeeController.designer.cs">
+      <DependentUpon>AllCoffeeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ApiFactory.cs" />
+    <Compile Include="Data\DbProvider.cs" />
+    <Compile Include="FavoritesController.cs" />
+    <Compile Include="FavoritesController.designer.cs">
+      <DependentUpon>FavoritesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoffeeTableViewSource.cs" />
+    <Compile Include="DetailController.cs" />
+    <Compile Include="DetailController.designer.cs">
+      <DependentUpon>DetailController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeeShopAnnotation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\SQLitePCL.raw.0.8.6\build\Xamarin.iOS10\SQLitePCL.raw.targets" Condition="Exists('..\packages\SQLitePCL.raw.0.8.6\build\Xamarin.iOS10\SQLitePCL.raw.targets')" />
@@ -133,5 +152,11 @@
       <Project>{67F3CFFD-B83D-46A1-ADE7-7AAF2585434F}</Project>
       <Name>ParisCoffee.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bg_landing.png" />
   </ItemGroup>
 </Project>

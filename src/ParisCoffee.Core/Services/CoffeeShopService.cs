@@ -1,20 +1,16 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Net.Http;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ParisCoffee.Core
 {
 	public class CoffeeShopService : ICoffeeShopService
 	{
-		private readonly ICoffeeShopApiClientFactory _apiClientFactory;
-		private readonly Uri _apiUrl;
+		private readonly IApiClientFactory _apiClientFactory;
 
-		public CoffeeShopService (ICoffeeShopApiClientFactory apiClientFactory, 
-		                          Uri apiUrl)
+		public CoffeeShopService (IApiClientFactory apiClientFactory)
 		{
 			_apiClientFactory = apiClientFactory;
-			_apiUrl = apiUrl;
 		}
 
 
@@ -22,7 +18,7 @@ namespace ParisCoffee.Core
 		{
 			using (var client = new HttpClient( _apiClientFactory.CreateApiClient ())) {
 				
-				var jsonCoffeeShopResult = await client.GetStringAsync (_apiUrl.ToString());
+				var jsonCoffeeShopResult = await client.GetStringAsync (_apiClientFactory.ApiUrl.ToString());
 			
 				return jsonCoffeeShopResult.MapToCoffeeShop ();
 			}

@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using ParisCoffee.iOS.ViewModel;
 
 namespace ParisCoffee.iOS
 {
@@ -9,6 +10,9 @@ namespace ParisCoffee.iOS
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
+		private static readonly ViewModelLocator _locator = new ViewModelLocator ();
+
+		public static ViewModelLocator ViewModelLocator { get { return _locator; } }
 
 		public override UIWindow Window {
 			get;

@@ -9,6 +9,8 @@ namespace ParisCoffee.Core
 		public string Name { get; set; }
 
 		public string Address { get; set; }
+
+		public Coordinates Coordinates { get; set; }
 	}
 }
 

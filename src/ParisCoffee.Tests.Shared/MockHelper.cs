@@ -5,8 +5,14 @@ using SQLite;
 
 namespace ParisCoffee.Tests
 {
-	public class MockCoffeeShopApiClientFactory : ICoffeeShopApiClientFactory
+	public class MockCoffeeShopApiClientFactory : IApiClientFactory
 	{
+		public Uri ApiUrl {
+			get {
+				return new Uri("http://test.test.com");
+			}
+		}
+
 		#region ICoffeeShopApiClientFactory implementation
 
 		HttpMessageHandler _messageHandlerToUse;
@@ -56,7 +62,7 @@ namespace ParisCoffee.Tests
 	public static class MockHelper
 	{
 
-		public static ICoffeeShopApiClientFactory CreateClient(HttpMessageHandler messageHandlerToUse)
+		public static IApiClientFactory CreateClient(HttpMessageHandler messageHandlerToUse)
 		{
 			return new MockCoffeeShopApiClientFactory(messageHandlerToUse);
 		}

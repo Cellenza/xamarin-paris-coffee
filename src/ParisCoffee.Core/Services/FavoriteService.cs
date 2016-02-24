@@ -12,8 +12,6 @@ namespace ParisCoffee.Core
 			_dbProvider = dbProvider;
 		}
 
-		#region IFavoriteService implementation
-
 		public IEnumerable<FavoriteShop> GetFavoriteShops ()
 		{
 			return _dbProvider.GetDatabaseInstance ()
@@ -35,8 +33,6 @@ namespace ParisCoffee.Core
 		{
 			_dbProvider.GetDatabaseInstance ().Delete<FavoriteShop> (coffeeShopId);
 		}
-
-		#endregion
 	}
 }
 

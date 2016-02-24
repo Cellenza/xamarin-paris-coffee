@@ -11,26 +11,18 @@ using UIKit;
 
 namespace ParisCoffee.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("FavoritesController")]
+	partial class FavoritesController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btntoto { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lbltoto { get; set; }
+		UITableView coffeeTableView { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (btntoto != null) {
-				btntoto.Dispose ();
-				btntoto = null;
-			}
-			if (lbltoto != null) {
-				lbltoto.Dispose ();
-				lbltoto = null;
+			if (coffeeTableView != null) {
+				coffeeTableView.Dispose ();
+				coffeeTableView = null;
 			}
 		}
 	}
