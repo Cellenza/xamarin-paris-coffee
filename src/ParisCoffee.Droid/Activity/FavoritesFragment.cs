@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace ParisCoffee.Droid
 {
-	public class FavoritesFragment : Fragment
+	public class FavoritesFragment : Android.Support.V4.App.Fragment
 	{
 		public override void OnCreate (Bundle savedInstanceState)
 		{

@@ -10,7 +10,7 @@ namespace ParisCoffee.Droid
 
 		public DbProvider ()
 		{
-			_db = new SQLiteConnection ("my_db_location");
+			_db = null;// new SQLiteConnection ("my_db_location");
 		}
 
 

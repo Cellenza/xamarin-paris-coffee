@@ -7,7 +7,7 @@ namespace ParisCoffee.Droid
 	{
 		public System.Net.Http.HttpMessageHandler CreateApiClient ()
 		{
-			throw new NotImplementedException ();
+			return new ModernHttpClient.NativeMessageHandler ();
 		}
 
 		public Uri ApiUrl {get {return new Uri ("http://opendata.paris.fr/api/records/1.0/search/?dataset=liste-des-cafes-a-un-euro");}}
