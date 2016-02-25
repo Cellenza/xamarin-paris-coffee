@@ -1,11 +1,16 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content.PM;
 
 namespace ParisCoffee.Droid
 {
-	[Activity (Label = "Paris Coffee", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity
+	[Activity (Label = "Paris Coffee", 
+		MainLauncher = true, 
+		Icon = "@mipmap/icon", 
+		Theme="@style/AppTheme.Landing",
+		ScreenOrientation = ScreenOrientation.Portrait)]	
+	public class LandingActivity : Activity
 	{
 		int count = 1;
 

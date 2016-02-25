@@ -46,7 +46,7 @@ namespace ParisCoffee.Droid.ViewModel
 
 
 			SimpleIoc.Default.Register<IDbProvider, DbProvider> ();
-			SimpleIoc.Default.Register<IApiClientFactory, ApiFactory> ();
+			SimpleIoc.Default.Register<IApiClientFactory, ApiClientFactory> ();
 			SimpleIoc.Default.Register<ICoffeeShopService, CoffeeShopService> ();
 			SimpleIoc.Default.Register<IFavoriteService, FavoriteService> ();
 
