@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParisCoffee.Forms.Landing">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParisCoffee.Forms.Landing" 
+	BackgroundImage="bg_landing.png" >
+
+<!--	TODO https://dzone.com/articles/using-full-size-none-stretched-->
 	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" >
+		<Label Text="Welcome to Paris Coffee" XAlign="Center"/>
+		<Button Text="Enter" x:Name="btnEnter"/>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

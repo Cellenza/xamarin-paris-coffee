@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParisCoffee.Forms.CoffeeList">
-	<ContentPage.Content>
-	</ContentPage.Content>
-</ContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParisCoffee.Forms.CoffeeList">
+	<!-- https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/-->
+	<ContentPage Title="All Coffee">
+		<ContentPage.Content>
+			<ListView />
+		</ContentPage.Content>
+	</ContentPage>
+	<ContentPage Title="Favorites">
+		<ContentPage.Content>
+			<ListView />
+		</ContentPage.Content>
+	</ContentPage>
+</TabbedPage>

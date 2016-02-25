@@ -1,25 +1,28 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using GalaSoft.MvvmLight.Views;
 
 namespace ParisCoffee.Forms
 {
 	public class App : Application
 	{
+
+		public IViewModelLocator ViewModelLocator {get; private set;}
+
+		public INavigationService NavigationService { get; private set; }
+
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
+			InitIoc ();
+
+			MainPage = new Landing();
+		}
+
+
+		private void InitIoc()
+		{
+			this.ViewModelLocator = DependencyService.Get<IViewModelLocator>();
 		}
 
 		protected override void OnStart ()

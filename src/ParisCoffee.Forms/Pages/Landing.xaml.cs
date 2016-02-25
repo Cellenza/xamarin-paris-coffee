@@ -10,6 +10,11 @@ namespace ParisCoffee.Forms
 		public Landing ()
 		{
 			InitializeComponent ();
+
+			this.btnEnter.Clicked += (sender, e) => 
+			{
+			//	https://developer.xamarin.com/guides/xamarin-forms/getting-started/introduction-to-xamarin-forms/#Navigation
+			};
 		}
 	}
 }

@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace ParisCoffee.Forms
 {
-	public partial class CoffeeList : ContentPage
+	public partial class CoffeeList : TabbedPage
 	{
 		public CoffeeList ()
 		{
