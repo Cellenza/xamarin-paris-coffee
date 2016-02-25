@@ -3,7 +3,13 @@
 	<!-- https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/-->
 	<ContentPage Title="All Coffee">
 		<ContentPage.Content>
-			<ListView />
+			<ListView ItemsSource="{Binding CoffeeShops}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+					<TextCell Text="{Binding Name}" Detail="{Binding Address}"/>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
 		</ContentPage.Content>
 	</ContentPage>
 	<ContentPage Title="Favorites">

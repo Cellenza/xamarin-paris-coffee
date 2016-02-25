@@ -5,8 +5,8 @@
 <!--	TODO https://dzone.com/articles/using-full-size-none-stretched-->
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="Center" >
-		<Label Text="Welcome to Paris Coffee" XAlign="Center"/>
-		<Button Text="Enter" x:Name="btnEnter"/>
+		<Label Text="Welcome to Paris Coffee" XAlign="Center" TextColor="White"/>
+		<Button Text="Enter" x:Name="btnEnter" BackgroundColor="#EEBBBBBB"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

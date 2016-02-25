@@ -1,13 +1,16 @@
 ﻿using System;
 using ParisCoffee.Core;
+using GalaSoft.MvvmLight.Views;
 
 namespace ParisCoffee.Forms
 {
-	public class IViewModelLocator
+	public interface IViewModelLocator
 	{
-		public ListViewModel ListViewModel {get;}
+		 ListViewModel ListViewModel {get;}
 
-		public DetailViewModel DetailViewModel { get;}
+		 DetailViewModel DetailViewModel { get;}
+
+		INavigationService InitializeNavigationService ();
 	}
 }
 

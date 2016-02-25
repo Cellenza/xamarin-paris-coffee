@@ -2,6 +2,7 @@
 
 using Xamarin.Forms;
 using GalaSoft.MvvmLight.Views;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace ParisCoffee.Forms
 {
@@ -16,13 +17,15 @@ namespace ParisCoffee.Forms
 		{
 			InitIoc ();
 
-			MainPage = new Landing();
+			MainPage = new NavigationPage(new Landing());
 		}
 
 
 		private void InitIoc()
 		{
 			this.ViewModelLocator = DependencyService.Get<IViewModelLocator>();
+			SimpleIoc.Default.Register<INavigationService> (() => this.ViewModelLocator.InitializeNavigationService ());
+
 		}
 
 		protected override void OnStart ()

@@ -14,6 +14,7 @@ namespace ParisCoffee.Forms
 			this.btnEnter.Clicked += (sender, e) => 
 			{
 			//	https://developer.xamarin.com/guides/xamarin-forms/getting-started/introduction-to-xamarin-forms/#Navigation
+				Navigation.PushAsync(new CoffeeList());
 			};
 		}
 	}

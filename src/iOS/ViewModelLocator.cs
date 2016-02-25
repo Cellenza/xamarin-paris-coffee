@@ -17,6 +17,7 @@ using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using ParisCoffee.Core;
 using ParisCoffee.Forms;
+using GalaSoft.MvvmLight.Views;
 
 
 [assembly: Xamarin.Forms.Dependency (typeof (ParisCoffee.Forms.iOS.ViewModelLocator))]
@@ -57,6 +58,11 @@ namespace ParisCoffee.Forms.iOS
 
 			SimpleIoc.Default.Register<ListViewModel> ();
 			SimpleIoc.Default.Register<DetailViewModel> ();
+		}
+
+		public INavigationService InitializeNavigationService()
+		{
+			return new NavigationService ();
 		}
 
 
