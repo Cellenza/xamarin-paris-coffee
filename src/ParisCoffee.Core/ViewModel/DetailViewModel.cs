@@ -15,6 +15,7 @@ namespace ParisCoffee.Core
 
 		public void InitVm(IMapHandle mapHandle, CoffeeShop coffeeShop)
 		{
+			mapHandle.AddAnnotation (coffeeShop);
 			mapHandle.ZoomTo (coffeeShop.Coordinates);
 		}
 		

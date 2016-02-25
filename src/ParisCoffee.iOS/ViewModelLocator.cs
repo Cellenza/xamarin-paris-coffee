@@ -52,6 +52,7 @@ namespace ParisCoffee.iOS.ViewModel
 
 
 			SimpleIoc.Default.Register<ListViewModel> ();
+			SimpleIoc.Default.Register<DetailViewModel> ();
 		}
 
 

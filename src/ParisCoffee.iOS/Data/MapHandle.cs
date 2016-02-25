@@ -19,7 +19,6 @@ namespace ParisCoffee.iOS
 		public void AddAnnotation (CoffeeShop coffeeShop)
 		{
 			_mapView.AddAnnotation (new CoffeeShopAnnotation (coffeeShop));
-
 		}
 
 		public void ZoomTo (Coordinates coordinates)
