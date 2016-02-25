@@ -71,3 +71,8 @@ And you will get the following datastructure :
 
 * [Android vs iOS view lifecycle](https://twitter.com/talant_a/status/699333527389794307)
 
+* https://developers.google.com/maps/documentation/android-api/signup
+
+* https://developer.xamarin.com/guides/android/platform_features/maps_and_location/maps/obtaining_a_google_maps_api_key/
+
+* https://wiki.cyanogenmod.org/w/Google_Apps

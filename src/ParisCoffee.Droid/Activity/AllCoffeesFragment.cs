@@ -11,7 +11,6 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V7.Widget;
 using ParisCoffee.Core;
 using GalaSoft.MvvmLight.Helpers;
 using GalaSoft.MvvmLight.Views;
@@ -28,25 +27,6 @@ namespace ParisCoffee.Droid
 		{
 			get{ return App.ViewModelLocator.ListViewModel;}
 		}
-			
-
-
-		public override void OnCreate (Bundle savedInstanceState)
-		{
-			base.OnCreate (savedInstanceState);
-			// Create your fragment here
-		}
-			
-		public async override void OnViewCreated (View view, Bundle savedInstanceState)
-		{
-			base.OnViewCreated (view, savedInstanceState);
-			await ViewModel.InitVm();
-
-			_adapter = ViewModel.CoffeeShops.GetAdapter (GetCoffeeShopView);
-			_listView.Adapter = (_adapter);
-		}
-
-		public ActivityBase CurrentActivity { get { return null; } }
 
 		void CoffeeShopSelected (object sender, AdapterView.ItemClickEventArgs e)
 		{
@@ -58,9 +38,19 @@ namespace ParisCoffee.Droid
 			intent.PutExtra ("longitute", shop.Coordinates.Longitude);
 
 			StartActivity (intent);
-				
-		}
 
+
+		}
+			
+		public async override void OnViewCreated (View view, Bundle savedInstanceState)
+		{
+			base.OnViewCreated (view, savedInstanceState);
+			await ViewModel.InitVm();
+
+			_adapter = ViewModel.CoffeeShops.GetAdapter (DelegatedGetCoffeeShopViewCreation);
+			_listView.Adapter = (_adapter);
+		}
+			
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			var view = inflater.Inflate(Resource.Layout.AllCoffee, container, false);
@@ -72,7 +62,7 @@ namespace ParisCoffee.Droid
 			return view;
 		}
 
-		private View GetCoffeeShopView(int position, CoffeeShop shop, View convertView)
+		private View DelegatedGetCoffeeShopViewCreation(int position, CoffeeShop shop, View convertView)
 		{
 			View view = convertView ?? Activity.LayoutInflater.Inflate(Resource.Layout.RowCoffeeShop, null);
 

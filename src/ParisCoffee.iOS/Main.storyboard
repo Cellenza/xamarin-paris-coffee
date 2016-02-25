@@ -1,76 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="950">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="950">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Coffee Paris-->
         <scene sceneID="937">
             <objects>
-                <viewController id="938" sceneMemberID="viewController" customClass="LandingViewController">
+                <viewController id="938" customClass="LandingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="935"/>
                         <viewControllerLayoutGuide type="bottom" id="936"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="939">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2599" translatesAutoresizingMaskIntoConstraints="NO" image="bg_landing.png" misplaced="YES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="bg_landing.png" translatesAutoresizingMaskIntoConstraints="NO" id="2599">
                                 <rect key="frame" x="14" y="83" width="299" height="473"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="2588" translatesAutoresizingMaskIntoConstraints="NO" text="Meet the French touch" textAlignment="center">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Meet the French touch" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2588">
                                 <rect key="frame" x="29" y="101" width="257" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="300" width="375" height="20.5"/>
-                                </variation>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="945" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="945">
                                 <rect key="frame" x="128" y="269" width="46" height="30"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="90" y="348.5" width="195" height="32"/>
-                                </variation>
-                                <connections>
-                                    <segue id="1649" destination="1259" kind="show"/>
-                                </connections>
+                                <color key="backgroundColor" red="1" green="0.8901960784313725" blue="0.95294117647058818" alpha="0.24705882352941178" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8901960784313725" blue="0.95294117647058818" alpha="0.24705882352941178"/>
                                 <state key="normal" title="Enter">
-                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1259" kind="show" id="1649"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="2655" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2655">
                                 <rect key="frame" x="150" y="410" width="42" height="21"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="100" y="410.5" width="175" height="20.5"/>
-                                </variation>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2599" firstAttribute="top" secondItem="939" secondAttribute="top" id="2609"/>
+                            <constraint firstItem="2599" firstAttribute="leading" secondItem="939" secondAttribute="leading" id="2615"/>
+                            <constraint firstAttribute="trailing" secondItem="2599" secondAttribute="trailing" id="2616"/>
+                            <constraint firstAttribute="bottom" secondItem="2599" secondAttribute="bottom" id="2619"/>
+                            <constraint firstItem="2588" firstAttribute="leading" secondItem="2599" secondAttribute="leading" id="2628"/>
+                            <constraint firstItem="2588" firstAttribute="top" secondItem="2599" secondAttribute="top" constant="300" id="2630"/>
+                            <constraint firstItem="2599" firstAttribute="trailing" secondItem="2588" secondAttribute="trailing" id="2633"/>
+                            <constraint firstItem="945" firstAttribute="top" secondItem="2588" secondAttribute="bottom" constant="28" id="2644"/>
+                            <constraint firstItem="945" firstAttribute="leading" secondItem="2599" secondAttribute="leading" constant="90" id="2645"/>
+                            <constraint firstItem="2599" firstAttribute="trailing" secondItem="945" secondAttribute="trailing" constant="90" id="2646"/>
+                            <constraint firstItem="2655" firstAttribute="leading" secondItem="2599" secondAttribute="leading" constant="100" id="2658"/>
+                            <constraint firstItem="2599" firstAttribute="trailing" secondItem="2655" secondAttribute="trailing" constant="100" id="2659"/>
+                            <constraint firstItem="2655" firstAttribute="top" secondItem="945" secondAttribute="bottom" constant="30" id="2660"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="945"/>
                                 <exclude reference="2655"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2628"/>
-                                <exclude reference="2630"/>
-                                <exclude reference="2633"/>
                                 <exclude reference="2644"/>
                                 <exclude reference="2645"/>
-                                <exclude reference="2646"/>
                                 <exclude reference="2658"/>
-                                <exclude reference="2659"/>
                                 <exclude reference="2660"/>
+                                <exclude reference="2633"/>
+                                <exclude reference="2646"/>
+                                <exclude reference="2659"/>
+                                <exclude reference="2628"/>
+                                <exclude reference="2630"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -79,62 +85,45 @@
                                 <include reference="2655"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2628"/>
-                                <include reference="2630"/>
-                                <include reference="2633"/>
                                 <include reference="2644"/>
                                 <include reference="2645"/>
-                                <include reference="2646"/>
                                 <include reference="2658"/>
-                                <include reference="2659"/>
                                 <include reference="2660"/>
+                                <include reference="2633"/>
+                                <include reference="2646"/>
+                                <include reference="2659"/>
+                                <include reference="2628"/>
+                                <include reference="2630"/>
                             </mask>
                         </variation>
-                        <constraints>
-                            <constraint id="2609" firstItem="2599" firstAttribute="top" secondItem="939" secondAttribute="top"/>
-                            <constraint id="2615" firstItem="2599" firstAttribute="leading" secondItem="939" secondAttribute="leading"/>
-                            <constraint id="2616" firstItem="939" firstAttribute="trailing" secondItem="2599" secondAttribute="trailing"/>
-                            <constraint id="2619" firstItem="939" firstAttribute="bottom" secondItem="2599" secondAttribute="bottom"/>
-                            <constraint id="2628" firstItem="2588" firstAttribute="leading" secondItem="2599" secondAttribute="leading"/>
-                            <constraint id="2630" firstItem="2588" firstAttribute="top" secondItem="2599" secondAttribute="top" constant="300"/>
-                            <constraint id="2633" firstItem="2599" firstAttribute="trailing" secondItem="2588" secondAttribute="trailing" constant="0"/>
-                            <constraint id="2644" firstItem="945" firstAttribute="top" secondItem="2588" secondAttribute="bottom" constant="28"/>
-                            <constraint id="2645" firstItem="945" firstAttribute="leading" secondItem="2599" secondAttribute="leading" constant="90"/>
-                            <constraint id="2646" firstItem="2599" firstAttribute="trailing" secondItem="945" secondAttribute="trailing" constant="90"/>
-                            <constraint id="2658" firstItem="2655" firstAttribute="leading" secondItem="2599" secondAttribute="leading" constant="100"/>
-                            <constraint id="2659" firstItem="2599" firstAttribute="trailing" secondItem="2655" secondAttribute="trailing" constant="100"/>
-                            <constraint id="2660" firstItem="2655" firstAttribute="top" secondItem="945" secondAttribute="bottom" constant="30"/>
-                        </constraints>
                     </view>
-                    <navigationItem title="Coffee Paris" id="1251" key="navigationItem">
-                        <accessibility key="accessibilityConfiguration">
-                            <bool key="isElement" value="NO"/>
-                        </accessibility>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Coffee Paris" id="1251"/>
                     <connections>
-                        <outlet property="lblNamFromViewModel" destination="2588" id="name-outlet-2588"/>
                         <outlet property="imgBackground" destination="2599" id="name-outlet-2599"/>
+                        <outlet property="lblNamFromViewModel" destination="2588" id="name-outlet-2588"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="940" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2394" y="1121"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="949">
             <objects>
                 <navigationController definesPresentationContext="YES" id="950" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="953">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <rect key="frame" x="0.0" y="20" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     </navigationBar>
                     <connections>
-                        <segue id="1252" destination="938" kind="relationship" relationship="rootViewController"/>
+                        <segue destination="938" kind="relationship" relationship="rootViewController" id="1252"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="954" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1911" y="1132"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="1258">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="1259" sceneMemberID="viewController">
@@ -146,42 +135,43 @@
                     </tabBar>
                     <connections>
                         <segue destination="1261" kind="relationship" relationship="viewControllers" id="1260"/>
-                        <segue id="2720" destination="2696" kind="relationship" relationship="viewControllers"/>
+                        <segue destination="2696" kind="relationship" relationship="viewControllers" id="2720"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1265" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2959" y="1110"/>
         </scene>
+        <!--All Coffee Controller-->
         <scene sceneID="1266">
             <objects>
-                <viewController id="1261" sceneMemberID="viewController" customClass="AllCoffeeController">
+                <viewController id="1261" customClass="AllCoffeeController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1254"/>
                         <viewControllerLayoutGuide type="bottom" id="1255"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1267">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="2427" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2427">
                                 <rect key="frame" x="17" y="142" width="272" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2428" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2428">
                                 <rect key="frame" x="86" y="203" width="46" height="30"/>
                                 <state key="normal" title="Open">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue id="2579" destination="1713" kind="show" identifier="DetailCoffeSegue"/>
+                                    <segue destination="1713" kind="show" identifier="DetailCoffeSegue" id="2579"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" id="1268" systemItem="search"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="1268"/>
                     <connections>
                         <outlet property="btnOpen" destination="2428" id="name-outlet-2428"/>
                         <outlet property="txtName" destination="2427" id="name-outlet-2427"/>
@@ -191,19 +181,19 @@
             </objects>
             <point key="canvasLocation" x="3489" y="638"/>
         </scene>
+        <!--Detail Controller-->
         <scene sceneID="1712">
             <objects>
-                <viewController id="1713" sceneMemberID="viewController" customClass="DetailController" storyboardIdentifier="DetailController">
+                <viewController storyboardIdentifier="DetailController" id="1713" customClass="DetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1710"/>
                         <viewControllerLayoutGuide type="bottom" id="1711"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1714">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nom du cafe" lineBreakMode="tailTruncation" minimumFontSize="10" id="2277" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nom du cafe" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2277">
                                 <rect key="frame" x="20" y="293" width="42" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -213,7 +203,7 @@
                                     <rect key="frame" x="20" y="293" width="335" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adresse du cafe" lineBreakMode="tailTruncation" minimumFontSize="10" id="2278" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adresse du cafe" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2278">
                                 <rect key="frame" x="15" y="322" width="42" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,13 +213,14 @@
                                     <rect key="frame" x="15" y="322" width="314" height="21"/>
                                 </variation>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="2279" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2279">
                                 <rect key="frame" x="33" y="59" width="160" height="240"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="15" y="71" width="379" height="191"/>
                                 </variation>
                             </mapView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="2277"/>
@@ -246,8 +237,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="lblName" destination="2277" id="name-outlet-2277"/>
                         <outlet property="lblAddress" destination="2278" id="name-outlet-2278"/>
+                        <outlet property="lblName" destination="2277" id="name-outlet-2277"/>
                         <outlet property="mapView" destination="2279" id="name-outlet-2279"/>
                     </connections>
                 </viewController>
@@ -255,48 +246,45 @@
             </objects>
             <point key="canvasLocation" x="4338" y="1040"/>
         </scene>
+        <!--Favorites Controller-->
         <scene sceneID="2695">
             <objects>
-                <viewController id="2696" sceneMemberID="viewController" customClass="FavoritesController">
+                <viewController id="2696" customClass="FavoritesController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2693"/>
                         <viewControllerLayoutGuide type="bottom" id="2694"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2697">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2722" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2722">
                                 <rect key="frame" x="88" y="161" width="198" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2723" rowHeight="44">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="2723">
                                         <rect key="frame" x="0.0" y="22" width="198" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2724" tableViewCell="2723">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2723" id="XbH-oi-zgz">
                                             <rect key="frame" x="0.0" y="0.0" width="198" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2725" rowHeight="44">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="2725">
                                         <rect key="frame" x="0.0" y="66" width="198" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2726" tableViewCell="2725">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2725" id="d1j-G5-9dk">
                                             <rect key="frame" x="0.0" y="0.0" width="198" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2727" rowHeight="44">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="2727">
                                         <rect key="frame" x="0.0" y="110" width="198" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2728" tableViewCell="2727">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2727" id="Jqs-DQ-xlV">
                                             <rect key="frame" x="0.0" y="0.0" width="198" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -304,6 +292,7 @@
                                 </variation>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="2722"/>
@@ -315,7 +304,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" id="2719" systemItem="favorites"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="2719"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="coffeeTableView" destination="2722" id="name-outlet-2722"/>
@@ -326,9 +315,6 @@
             <point key="canvasLocation" x="3581" y="1618"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination" type="retina47"/>
-    </simulatedMetricsContainer>
     <resources>
         <image name="bg_landing.png" width="272" height="481"/>
     </resources>
