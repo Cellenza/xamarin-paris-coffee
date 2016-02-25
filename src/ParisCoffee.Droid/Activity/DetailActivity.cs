@@ -11,12 +11,15 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using GalaSoft.MvvmLight.Views;
 
 namespace ParisCoffee.Droid
 {
 	[Activity (Label = "DetailActivity", ScreenOrientation = ScreenOrientation.Portrait)]				
-	public class DetailActivity : Activity
+	public class DetailActivity : ActivityBase
 	{
+		public const string NavigationKey = "DetailActivity";
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);

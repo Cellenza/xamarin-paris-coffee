@@ -25,6 +25,8 @@ namespace ParisCoffee.Droid
 			// ioc configuration
 			var navigationService = new NavigationService();
 
+			navigationService.Configure (DetailActivity.NavigationKey, typeof(DetailActivity));
+
 			SimpleIoc.Default.Register<INavigationService>(() => navigationService);
 
 		}

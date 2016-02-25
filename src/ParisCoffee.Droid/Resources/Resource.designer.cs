@@ -1426,6 +1426,12 @@ namespace ParisCoffee.Droid
 			// aapt resource value: 0x7f07005c
 			public const int chronometer = 2131165276;
 			
+			// aapt resource value: 0x7f070063
+			public const int coffee_address = 2131165283;
+			
+			// aapt resource value: 0x7f070062
+			public const int coffee_name = 2131165282;
+			
 			// aapt resource value: 0x7f070018
 			public const int collapseActionView = 2131165208;
 			
@@ -1495,6 +1501,9 @@ namespace ParisCoffee.Droid
 			// aapt resource value: 0x7f07005e
 			public const int line3 = 2131165278;
 			
+			// aapt resource value: 0x7f070050
+			public const int list = 2131165264;
+			
 			// aapt resource value: 0x7f07000a
 			public const int listMode = 2131165194;
 			
@@ -1533,9 +1542,6 @@ namespace ParisCoffee.Droid
 			
 			// aapt resource value: 0x7f07003b
 			public const int radio = 2131165243;
-			
-			// aapt resource value: 0x7f070050
-			public const int recyler = 2131165264;
 			
 			// aapt resource value: 0x7f070020
 			public const int screen = 2131165216;
@@ -1804,16 +1810,19 @@ namespace ParisCoffee.Droid
 			public const int notification_template_part_time = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int select_dialog_item_material = 2130968613;
+			public const int RowCoffeeShop = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int select_dialog_multichoice_material = 2130968614;
+			public const int select_dialog_item_material = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int select_dialog_singlechoice_material = 2130968615;
+			public const int select_dialog_multichoice_material = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int support_simple_spinner_dropdown_item = 2130968616;
+			public const int select_dialog_singlechoice_material = 2130968616;
+			
+			// aapt resource value: 0x7f040029
+			public const int support_simple_spinner_dropdown_item = 2130968617;
 			
 			static Layout()
 			{

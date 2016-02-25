@@ -19,35 +19,30 @@ namespace ParisCoffee.Droid
 	[Activity (Label = "CoffeeListActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class CoffeeListActivity : FragmentActivity
 	{
-		protected ListViewModel ViewModel
-		{
-			get{ return App.ViewModelLocator.ListViewModel;}
-		}
-
-		protected async override void OnCreate (Bundle savedInstanceState)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
 
-
 			SetContentView (Resource.Layout.CoffeeList);
 
+			InitializeTabs ();
+		}
+
+
+		private void InitializeTabs()
+		{
 			FragmentTabHost tabhost = FindViewById<FragmentTabHost> (Resource.Id.tabhost);
 
 			tabhost.Setup (this, SupportFragmentManager, Resource.Id.tabcontent);
 
 
-
 			tabhost.AddTab (
 				tabhost.NewTabSpec ("all-coffee").SetIndicator ("All coffee", null),
 				Java.Lang.Class.FromType (typeof(AllCoffeesFragment)), new Bundle());
-	
+
 			tabhost.AddTab (
 				tabhost.NewTabSpec ("favorites").SetIndicator ("Favorites", null),
 				Java.Lang.Class.FromType (typeof(FavoritesFragment)), new Bundle());
-			
-			await ViewModel.InitVm ();
-
-			// Create your application here
 		}
 	}
 }

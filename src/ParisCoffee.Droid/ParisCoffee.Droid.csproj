@@ -117,6 +117,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\bg_landing.png" />
     <AndroidResource Include="Resources\drawable-mdpi\bg_landing.png" />
     <AndroidResource Include="Resources\layout\AllCoffee.axml" />
+    <AndroidResource Include="Resources\layout\RowCoffeeShop.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
