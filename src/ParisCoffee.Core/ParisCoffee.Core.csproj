@@ -46,6 +46,7 @@
     <Compile Include="Data\IApiClientFactory.cs" />
     <Compile Include="Model\Coordinates.cs" />
     <Compile Include="Extensions\Location.cs" />
+    <Compile Include="Data\IMapHandle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

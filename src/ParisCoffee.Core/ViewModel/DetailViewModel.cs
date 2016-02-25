@@ -6,6 +6,17 @@ namespace ParisCoffee.Core
 {
 	public class DetailViewModel : ViewModelBase
 	{
+		readonly IFavoriteService _favoriteService;
+
+		public DetailViewModel (IFavoriteService favoriteService)
+		{
+			_favoriteService = favoriteService;
+		}
+
+		public void InitVm(IMapHandle mapHandle, CoffeeShop coffeeShop)
+		{
+			mapHandle.ZoomTo (coffeeShop.Coordinates);
+		}
 		
 	}
 

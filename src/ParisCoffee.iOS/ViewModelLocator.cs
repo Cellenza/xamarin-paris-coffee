@@ -31,6 +31,12 @@ namespace ParisCoffee.iOS.ViewModel
 			get{ return _listViewModel = _listViewModel ?? ServiceLocator.Current.GetInstance<ListViewModel> (); }
 		}
 
+		private DetailViewModel _detailViewModel;
+
+		public DetailViewModel DetailViewModel {
+			get{ return _detailViewModel = _detailViewModel ?? ServiceLocator.Current.GetInstance<DetailViewModel> (); }
+		}
+
 		/// <summary>
 		/// Initializes a new instance of the ViewModelLocator class.
 		/// </summary>

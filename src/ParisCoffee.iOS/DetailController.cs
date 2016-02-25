@@ -14,6 +14,8 @@ namespace ParisCoffee.iOS
 		public const string StoryBoardId = "DetailController";
 		public const string NavigationKey = "DetailController";
 
+		protected DetailViewModel ViewModel { get { return AppDelegate.ViewModelLocator.DetailViewModel; } }
+
 
 		public DetailController (IntPtr handle) : base (handle)
 		{
@@ -26,15 +28,11 @@ namespace ParisCoffee.iOS
 			var coffeshop = this.NavigationParameter as CoffeeShop;
 
 			if (coffeshop != null) {
+
 				lblName.Text = coffeshop.Name;
 				lblAddress.Text = coffeshop.Address;
 
-				this.mapView.AddAnnotation (new CoffeeShopAnnotation (coffeshop));
-
-				var coords = new CLLocationCoordinate2D (coffeshop.Coordinates.Longitude, coffeshop.Coordinates.Latitude);
-				var span = new MKCoordinateSpan (Location.MilesToLatitudeDegrees(2), 
-					Location.MilesToLongitudeDegrees (2, coords.Longitude));
-				mapView.Region = new MKCoordinateRegion (coords, span);
+				this.ViewModel.InitVm (new MapHandle (mapView), coffeshop);
 			}
 		}
 	}

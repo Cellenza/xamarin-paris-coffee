@@ -143,6 +143,7 @@
       <DependentUpon>DetailController.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\CoffeeShopAnnotation.cs" />
+    <Compile Include="Data\MapHandle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\SQLitePCL.raw.0.8.6\build\Xamarin.iOS10\SQLitePCL.raw.targets" Condition="Exists('..\packages\SQLitePCL.raw.0.8.6\build\Xamarin.iOS10\SQLitePCL.raw.targets')" />
