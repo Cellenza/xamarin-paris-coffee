@@ -15,6 +15,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using ParisCoffee.Core;
 
 namespace ParisCoffee.Droid.ViewModel
 {
@@ -24,26 +25,34 @@ namespace ParisCoffee.Droid.ViewModel
     /// </summary>
     public class ViewModelLocator
     {
-        /// <summary>
-        /// Initializes a new instance of the ViewModelLocator class.
-        /// </summary>
-        public ViewModelLocator()
-        {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+		private ListViewModel _listViewModel;
 
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DataService>();
-            ////}
+		public ListViewModel ListViewModel {
+			get{ return _listViewModel = _listViewModel ?? ServiceLocator.Current.GetInstance<ListViewModel> (); }
+		}
 
-     //       SimpleIoc.Default.Register<MainViewModel>();
-        }
+		private DetailViewModel _detailViewModel;
+
+		public DetailViewModel DetailViewModel {
+			get{ return _detailViewModel = _detailViewModel ?? ServiceLocator.Current.GetInstance<DetailViewModel> (); }
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the ViewModelLocator class.
+		/// </summary>
+		public ViewModelLocator ()
+		{
+			ServiceLocator.SetLocatorProvider (() => SimpleIoc.Default);
+
+
+			SimpleIoc.Default.Register<IDbProvider, DbProvider> ();
+			SimpleIoc.Default.Register<IApiClientFactory, ApiFactory> ();
+			SimpleIoc.Default.Register<ICoffeeShopService, CoffeeShopService> ();
+			SimpleIoc.Default.Register<IFavoriteService, FavoriteService> ();
+
+
+			SimpleIoc.Default.Register<ListViewModel> ();
+		}
 
 
         
