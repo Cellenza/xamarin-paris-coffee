@@ -14,6 +14,9 @@ namespace ParisCoffee.Forms.iOS
 		{
 			global::Xamarin.Forms.Forms.Init ();
 
+			https://developer.xamarin.com/guides/xamarin-forms/working-with/maps/
+			Xamarin.FormsMaps.Init();
+
 			LoadApplication (new App ());
 
 			return base.FinishedLaunching (app, options);

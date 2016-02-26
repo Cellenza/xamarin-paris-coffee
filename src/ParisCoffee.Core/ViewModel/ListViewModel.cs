@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Views;
+using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
 
 namespace ParisCoffee.Core
 {
@@ -39,6 +41,14 @@ namespace ParisCoffee.Core
 
 				CoffeeShops = new ObservableCollection<CoffeeShop> (allcoffees);
 			}
+		}
+
+		private ICommand _selectedShopCommand;
+		public ICommand SelectedShopCommand { get { return _selectedShopCommand = _selectedShopCommand ?? new RelayCommand(OnSelect);} }
+
+		public void OnSelect()
+		{
+			_navigationService.NavigateTo ("Detail");
 		}
 	}
 }

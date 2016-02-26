@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParisCoffee.Forms.CoffeeList">
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParisCoffee.Forms.CoffeeList"
+
+xmlns:local="clr-namespace:ParisCoffee.Forms;assembly=ParisCoffee.Forms">
 	<!-- https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/-->
 	<ContentPage Title="All Coffee">
 		<ContentPage.Content>
-			<ListView ItemsSource="{Binding CoffeeShops}">
-				<ListView.ItemTemplate>
+			<local:CoffeeListView ItemsSource="{Binding CoffeeShops}" ItemClickCommand="{Binding SelectedShopCommand}">
+				<local:CoffeeListView.ItemTemplate>
 					<DataTemplate>
-					<TextCell Text="{Binding Name}" Detail="{Binding Address}"/>
+					<TextCell Text="{Binding Name}" Detail="{Binding Address}" />
 					</DataTemplate>
-				</ListView.ItemTemplate>
-			</ListView>
+				</local:CoffeeListView.ItemTemplate>
+			</local:CoffeeListView>
 		</ContentPage.Content>
 	</ContentPage>
 	<ContentPage Title="Favorites">
