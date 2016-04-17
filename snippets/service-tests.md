@@ -1,7 +1,8 @@
 
 ## Testing session walkthrough
 
-* [ ] Discover [NUnit](http://nunit.org/) - [NSubstitue](http://nsubstitute.github.io/) - [NFluent](http://www.n-fluent.net/) 
+* [ ] Discover [NUnit](http://nunit.org/) - [NSubstitue](http://nsubstitute.github.io/)
+
   * How to mock http request ?
 * [ ] Integration of the local db [sqlite3 library](https://www.nuget.org/packages/sqlite-net-pcl/)
 * [ ] Integration of the .net [http client library](https://blogs.msdn.microsoft.com/bclteam/p/httpclient/)  
